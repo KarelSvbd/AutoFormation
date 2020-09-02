@@ -1,0 +1,7 @@
+Class :
+container : avec margin
+conatainer fluid : sans margin (prends toute la page)
+
+navbar :
+fixed-top : fixé en haut
+
