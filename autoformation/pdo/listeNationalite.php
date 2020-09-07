@@ -21,6 +21,11 @@ if(!empty($_SESSION['message'])){
 $_SESSION['message']=[];
 }
 ?>
+<div class="row mt-2">
+  <form action="" method="get" class="border border-primary rounded p-3">
+
+  </form>
+</div>
 
 <div class="container pt-5">
 

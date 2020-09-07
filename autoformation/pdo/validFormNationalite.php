@@ -7,13 +7,17 @@ $action=$_GET['action'];
 $num=$_POST['num']; //je récupère le libellé du formulaire
 $libelle=$_POST['libelle'];
 
+$continent=$_POST['continent'];
+
 if($action=="Modifier"){
-  $req=$monPdo->prepare("update nationalite set libelle = :libelle WHERE num = :num"); //requête paramètrée
+  $req=$monPdo->prepare("update nationalite set libelle = :libelle, numContinent= :continent WHERE num = :num"); //requête paramètrée
   $req->bindParam(':num', $num); //définition des paramètres
   $req->bindParam(':libelle', $libelle);
+  $req->bindParam(':contienet', $continent);
 }else{
-  $req=$monPdo->prepare("insert into nationalite(libelle) values(:libelle)"); //requête paramètrée
+  $req=$monPdo->prepare("insert into nationalite(libelle, numContinent) values(:libelle)"); //requête paramètrée
   $req->bindParam(':libelle', $libelle); //définition des paramètres
+  $req->bindParam(':continent', $continent);
 }
 
 $nb=$req->execute();

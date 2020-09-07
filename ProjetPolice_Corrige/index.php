@@ -1,4 +1,5 @@
-<?php 
+<?php session_start();
+
 /* Projet      : Police
  * Version     : 2.0
  * Description : Correction du projet
@@ -6,27 +7,35 @@
  * 
  * 
  * Auteurs     : Karel V. Svoboda
- * Classe      : I.DA-P2B
+ * Classe      : I.DA-P3B
 */
 
+require('./modeles/connexionbdd.php');
+require('./modeles/Candidatures.php');
 //appel du header
-require('./inc/header.inc.php');
-?>
-<?php
+require('./vues/header.inc.php');
+
 //appel de la navigation
- require('./inc/nav.inc.php')
+require('./vues/nav.inc.php');
+
+$uc = empty($_GET['uc']) ? "accueil" : $_GET['uc']; //si $uc est vide alors on retourne accueil, si ce n'est pas le cas on retourne la veleur de $uc
+
+switch($uc){
+    case 'accueil' :
+        require('./vues/accueil.php');
+        break;
+    case 'postuler' :
+        require('./controllers/candidatureController.php');
+        break;
+    case 'listerCandidats' :
+        
+        break;
+}
+
+/**/
+
+
+require('./vues/footer.inc.php');
 ?>
-<body>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</body>
-
-<?php
-    require('./inc/footer.inc.php');
-?>
-</html>
-
 
 
