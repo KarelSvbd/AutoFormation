@@ -1,7 +1,31 @@
-Class :
+Class bootstrap :
+
 container : avec margin
 conatainer fluid : sans margin (prends toute la page)
 
 navbar :
 fixed-top : fixé en haut
+navbar-expend-md : 
+- md = s'execute si on est sur un écran médium
+
+
+Colonnes bootrap :
+total de 12 colonnes
+
+par ex : class="col-md-4" = chaque élément prend 4 colones cet à dire qu'il y a 3 éléments
+
+couleur :
+ bootstrap -> documentation .> componenets
+
+margin-top : mt/ [1-5]
+padding-top : pt [1-5]
+
+
+pdo :
+pdo = librairie php pour utiliser mysql
+try-catch = lever les exceptions
+
+Erreur :
+Afficher les erreurs : PDO::ATTR_ERRMODE
+Niveau affichage des erreurs : Silent, Warning, Exception
 

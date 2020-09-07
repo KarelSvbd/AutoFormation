@@ -1,5 +1,6 @@
 <?php
-echo "<nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
+?>
+<nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
         <a class='navbar-brand' href='#'>Recrutement police Genevoise</a>
             <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation'>
                 <span class='navbar-toggler-icon'></span>
@@ -8,6 +9,7 @@ echo "<nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
                 <div class='navbar-nav'>
                     <a class='nav-link' href='/ProjetPolice_Corrige/index.php'>Accueil<span class='sr-only'>(current)</span></a>
                     <a class='nav-link' href='/ProjetPolice_Corrige/php/postuler.php'>Postuler</a>
+                    <a href="" class="navlink"></a>
                 </div>
                 <div class='mx-auto order-0'>
                     <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='.dual-collapse2'>
@@ -22,4 +24,4 @@ echo "<nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
                     </ul>
                 </div>
                 </div>
-        </nav>";
+        </nav>
