@@ -1,6 +1,6 @@
 <body>
                 <div class="container">
-                    <form method="post" class="mt-2" action="#">
+                    <form method="post" class="mt-2" action="/ProjetPolice_Corrige/index.php?uc=postuler&action=add">
                         <div class="form-row">
                             <div class="form-group col-md-8">
                             <label for="inputCity">Nom</label>
@@ -27,23 +27,16 @@
                             <div class="form-group col-md-6">
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-8">
                             <label for="inputCity">Ville</label>
                             <input type="text" class="form-control" id="ville">
                             </div>
                             <div class="form-group col-md-4">
-                            <label for="inputState">Canton :</label>
-                            <select id="inputState" class="form-control" name="canton" >
-                                <option selected>-- Veuillez séléctionner un canton --</option>
-                                <option>...</option>
-                            </select>
-                            </div>
-                            <div class="form-group col-md-2">
                             <label for="inputZip">Code Postal</label>
                             <input type="text" class="form-control" name="codePostal" id="inputZip">
                             </div>
                         </div>
-                        <a href="./ProjetPolice_Corrige/controllers/index.php?uc=postuler&action=ajouter"><button type="submit" class="btn btn-success  mb-5 mt-2">Envoyer ma candidature</button><7a>
+                        <a href="/ProjetPolice_Corrige/index.php?uc=postuler&action=add"><div class="btn btn-success  mb-5 mt-2">Envoyer ma candidature</div></a>
                     </form>
                 </div>
 </body>

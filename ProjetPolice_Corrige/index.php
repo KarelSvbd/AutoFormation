@@ -1,7 +1,8 @@
 <?php session_start();
 
+
 /* Projet      : Police
- * Version     : 2.0
+ * Version     : 2.3
  * Description : Correction du projet
  * Date        : 02.08.2020
  * 
@@ -27,12 +28,7 @@ switch($uc){
     case 'postuler' :
         require('./controllers/candidatureController.php');
         break;
-    case 'listerCandidats' :
-        
-        break;
 }
-
-/**/
 
 
 require('./vues/footer.inc.php');
