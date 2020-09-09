@@ -12,7 +12,7 @@
             <div class="mt-2 font-weight-bold">Important : Projetez-vous dès maintenant dans votre avenir professionnel ! A tout moment de l'année, passez le processus de recrutement ! Une fois réussi, vous faites partie du bassin de relève et êtes prêt-e à commencer votre école de police.</div>
                 
             </div>
-            <a href="/ProjetPolice_Corrige/index.php?uc=postuler" class=" mt-5 col-4 mb-5"  style="margin:auto"><button class="btn btn-block bg-success">Postuler</button></a>
+            <a href="/ProjetPolice_Corrige/index.php?uc=postuler?action=add" class=" mt-5 col-4 mb-5"  style="margin:auto"><button class="btn btn-block bg-success">Postuler</button></a>
 
             
             

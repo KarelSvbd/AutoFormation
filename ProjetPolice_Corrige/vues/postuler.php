@@ -43,7 +43,7 @@
                             <input type="text" class="form-control" name="codePostal" id="inputZip">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-success  mb-5 mt-2">Envoyer ma candidature</button>
+                        <a href="./ProjetPolice_Corrige/controllers/index.php?uc=postuler&action=ajouter"><button type="submit" class="btn btn-success  mb-5 mt-2">Envoyer ma candidature</button><7a>
                     </form>
                 </div>
 </body>

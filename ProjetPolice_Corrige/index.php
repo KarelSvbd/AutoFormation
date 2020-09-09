@@ -10,7 +10,7 @@
  * Classe      : I.DA-P3B
 */
 
-require('./modeles/connexionbdd.php');
+require('./modeles/monPdo.php');
 require('./modeles/Candidatures.php');
 //appel du header
 require('./vues/header.inc.php');

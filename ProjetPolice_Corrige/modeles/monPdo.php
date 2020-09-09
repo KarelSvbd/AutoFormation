@@ -6,13 +6,15 @@
 */
 class MonPdo
 {
-
 private static $serveur='mysql:host=localhost';
 private static $bdd='dbname=police2'; 
 private static $user='root' ; 
 private static $mdp='' ;
 private static $monPdo;
 private static $unPdo = null;
+
+
+
 
 //  Constructeur privé, crée l'instance de PDO qui sera sollicitée
 //  pour toutes les méthodes de la classe
@@ -25,6 +27,7 @@ private function __construct()
 public function __destruct()
 { 
     MonPdo::$unPdo = null;
+    
 }
 /**
 *   Fonction statique qui cree l'unique instance de la classe
@@ -39,6 +42,7 @@ public static function getInstance()
     }
     return self::$unPdo;
 }
+
 
 }
 ?>

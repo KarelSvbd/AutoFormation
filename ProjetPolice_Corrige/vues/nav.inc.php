@@ -9,8 +9,8 @@
                 <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
                 <div class='navbar-nav'>
                     <a class='nav-link' href='/ProjetPolice_Corrige/index.php?uc=accueil'>Accueil<span class='sr-only'>(current)</span></a>
-                    <a class='nav-link' href='/ProjetPolice_Corrige/index.php?uc=postuler'>Postuler</a>
-                    <a class='nav-link' href='/ProjetPolice_Corrige/index.php?uc=postuler?action=list'>Lister les candidatures</a>
+                    <a class='nav-link' href='/ProjetPolice_Corrige/index.php?uc=postuler&action=add'>Postuler</a>
+                    <a class='nav-link' href='/ProjetPolice_Corrige/index.php?uc=postuler&action=list'>Lister les candidatures</a>
                     <a href="" class="navlink"></a>
                 </div>
                 <?php /*<div class='mx-auto order-0'>

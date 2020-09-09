@@ -17,6 +17,13 @@ class Candidature {
      */
     private $nom;
 
+    /**
+     * nom de la candidature
+     *
+     * @var string
+     */
+    private $prenom;
+
    
     /**
      * Get the value of idCandidature
@@ -45,6 +52,143 @@ class Candidature {
     public function setNom(string $nom) : self
     {
     $this->nom = $nom;
+
+    return $this;
+    }
+
+    /**
+     * Lit le prenom
+     *
+     * @return string
+     */
+    public function getPrenom() : string
+    {
+    return $this->prenom;
+    }
+
+    /**
+     * ecrit dans le "prenom"
+     *
+     * @param string $prenom
+     * @return self
+     */
+    public function setPrenom(string $prenom) : self
+    {
+    $this->prenom = $prenom;
+
+    return $this;
+    }
+
+    /**
+     * Lit le email
+     *
+     * @return string
+     */
+    public function getEmail() : string
+    {
+    return $this->email;
+    }
+
+    /**
+     * ecrit dans le "email"
+     *
+     * @param string $email
+     * @return self
+     */
+    public function setEmail(string $email) : self
+    {
+    $this->email = $email;
+
+    return $this;
+    }
+
+    /**
+     * Lit le telephone
+     *
+     * @return string
+     */
+    public function getTelephone() : string
+    {
+    return $this->telephone;
+    }
+
+    /**
+     * ecrit dans le "email"
+     *
+     * @param string $email
+     * @return self
+     */
+    public function setTelephone(string $telephone) : self
+    {
+    $this->telephone = $telephone;
+
+    return $this;
+    }
+
+    /**
+     * Lit le code postal
+     *
+     * @return string
+     */
+    public function getCodePostal() : string
+    {
+    return $this->codePostal;
+    }
+
+    /**
+     * ecrit dans le "email"
+     *
+     * @param string $email
+     * @return self
+     */
+    public function setCodePostal(string $codePostal) : self
+    {
+    $this->codePostal = $codePostal;
+
+    return $this;
+    }
+    /**
+     * Lit l'Adresse
+     *
+     * @return string
+     */
+    public function getAdresse() : string
+    {
+    return $this->Adresse;
+    }
+
+    /**
+     * ecrit dans le "Adresse"
+     *
+     * @param string $Adresse
+     * @return self
+     */
+    public function setAdresse(string $adresse) : self
+    {
+    $this->Adresse = $adresse;
+
+    return $this;
+    }
+
+    /**
+     * Lit la ville
+     *
+     * @return string
+     */
+    public function getVille() : string
+    {
+    return $this->Ville;
+    }
+
+    /**
+     * ecrit dans la "ville"
+     *
+     * @param string $ville
+     * @return self
+     */
+    public function setVille(string $ville) : self
+    {
+    $this->Ville = $ville;
 
     return $this;
     }
@@ -80,16 +224,29 @@ class Candidature {
     }
 
     /**
-     * Permet d'ajouter un candidature
+     * Permet d'ajouter une candidature
      *
      * @param Candidature $candidature candidature à ajouter
      * @return integer resultat (1 si l'opération a réussi, 0 sinon)
      */
     public static function add(Candidature $candidature) :int
     {
-        $req=MonPdo::getInstance()->prepare("insert into candidature(nom) values(:nom)");
+        $req=MonPdo::getInstance()->prepare("insert into candidature(`nom`, `prenom`, `email`, `telephone`, `adresse`, `ville`, `codePostal`) values(:nom, :prenom, :email, :telephone, :adresse, :ville, :codePostal)");
         $nom=$candidature->getNom();
+        $prenom=$candidature->getPrenom();
+        $email=$candidature->getEmail();
+        $telephone=$candidature->getTelephone();
+        $adresse=$candidature->getAdresse();
+        $ville=$candidature->getVille();
+        $codePostal=$candidature->getCodePostal();
+        //affectation des valeurs aux paramètres
         $req->bindParam(':nom', $nom);
+        $req->bindParam(':prenom', $prenom);
+        $req->bindParam(':email', $email);
+        $req->bindParam(':telephone', $telephone);
+        $req->bindParam(':adresse', $adresse);
+        $req->bindParam(':ville', $ville);
+        $req->bindParam(':codePostal', $codePostal);
         $nb=$req->execute();
         return $nb;  
     }
